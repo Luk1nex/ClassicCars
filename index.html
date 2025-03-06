@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+    </head>
+    <body>
+        <script type="module" src="/main.js"></script>
+
+            <!--Load Car Data Here -->
+            <div id="ImageContainer"></div>
+            <!--Load Car Data Here -->
+
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="access_key" value="02fdf9d8-2b7f-4453-9fc2-e642399322ed">
+                <input type="text" name="Car Model" placeholder="Car Model" class="contact-input">
+                <input type="text" name="Car Color" placeholder="Car Color" class="contact-input">
+                <input type="text" name="Car Price" placeholder="Car Price" class="contact-input">
+                <!-- <input type="file" name="Car Pictures" placeholder="Car Pictures" class="contact-input" multiple> -->
+                <input type="text" name="Modifications" placeholder="Modifications" class="LargeBox">
+
+                <input type="submit" value="Submit" class="contact-input">
+            </form>
+        
+
+            <script>
+                
+                const cars = [
+    {
+        name: "2020 Super Fast Car",
+        image: "car",
+        price: 1900.99
+    },
+    {
+        name: "2021 Super Fast Car",
+        image: "car",
+        price: 2400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car",
+        price: 1400.99
+    },
+    {
+        name: "2025 Super Fast Car",
+        image: "car",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car",
+        price: 2400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car",
+        price: 1400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car",
+        price: 1900.99
+    }
+];
+
+document.getElementById("ImageContainer").innerHTML = cars.map(car => `
+    <div class="image-wrapper">
+        <img src="CarPictures/${car.image}.png" alt="${car.name}">
+        <p>${car.name}</p>
+        <span class="price-tag">$${car.price.toFixed(2)}</span>
+    </div>
+`).join('');
+</script>
+
+
+    </body>
+
+    <div id="info">Classic Cars</div>
+
+</html>
