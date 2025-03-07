@@ -1,8 +1,8 @@
 #info {
-
+  /* make it so the bar is sticky at top */
+    position: fixed;
     font-size: 50px;
-	position: absolute;
-	top: 10px;
+	top: 0px;
 	width: 100%;
 	justify-content: center;
 	text-align: center;
@@ -10,9 +10,11 @@
 	display:block;
     /* color:rgb(0, 0, 0) */
 	font-weight: bold;
-	background-color: rgba(0, 0, 0, 0.37);
+    color : rgb(255, 0, 0, .5);
+	background-color: rgba(0, 0, 0, 0.5);
 	padding: 10px;
-
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 2cqb rgb(0, 0, 0);
 	
 	
     
@@ -22,10 +24,10 @@
 
 #ImageContainer {
 	margin-top:100px;
-	background-color: rgba(0, 0, 0, 0.37);
+	/* background-color: rgba(0, 0, 0, 0.37); */
 	
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4 , 1fr);
     gap: 30px;
 	
 	padding: 20px; /* Adds space inside the container */
@@ -34,12 +36,12 @@
 }
 
 #ImageContainer img {
-	background-color: rgb(133, 133, 133);
+	background-color: rgb(0, 0, 0);
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px; /* Optional, for rounded corners */
-	padding : 10px;
+	padding : 2px;
 }
 
 .image-wrapper:hover {
@@ -73,9 +75,13 @@
     color: white;
     text-shadow: 2px 2px 2px black;
     padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 10px;
+    padding-bottom: 12px;
+    margin-left: 2px;
     bottom: 55px;
+
+    font-weight: bold;
+
+    /* visibility: hidden; */
 
 
 }
@@ -91,6 +97,9 @@
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
+   
+
+    /* visibility: hidden; */
 }
 
 form {
