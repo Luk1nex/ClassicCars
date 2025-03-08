@@ -1,25 +1,94 @@
-#info {
+.pages {
   /* make it so the bar is sticky at top */
+    z-index: 2;
     position: fixed;
-    font-size: 50px;
+    font-size: 25px;
 	top: 0px;
 	width: 100%;
 	justify-content: center;
 	text-align: center;
-	z-index: 100;
+	
 	display:block;
     /* color:rgb(0, 0, 0) */
 	font-weight: bold;
-    color : rgb(255, 0, 0, .5);
+    
+    color: rgba(0, 0, 0, 0.5);
 	background-color: rgba(0, 0, 0, 0.5);
-	padding: 10px;
+	padding: 30px;
     margin-bottom: 2px;
-    text-shadow: 2px 2px 2cqb rgb(0, 0, 0);
-	
-	
+    text-shadow: 2px 2px 2cqb rgb(0, 0, 0); 
     
 }
 
+
+nav {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+   }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+.pages a {
+    color: inherit; 
+    text-decoration: none;
+    background-color: rgb(43, 43, 43, .4);
+    border-radius: 8px; /* Optional, for rounded corners */
+    padding: 10px;
+  }
+
+.pages a:hover {
+    color : rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 1px 1px rgb(255, 0, 0);
+    font-weight: bold;
+    text-decoration: underline;
+   
+
+}
+
+.socials {
+    z-index: 2;
+    position: fixed;
+    left: 80%;
+    top: 2%;
+    border-radius: 8px;
+    transform: translate(0%, 0%);
+    background-color: rgb(43, 43, 43, .4);
+    padding: 2px;
+
+}
+
+.socials a {
+    padding : 10px;
+}
+
+
+.Title{
+font-size: 20px;
+z-index: 3;
+position: fixed;
+display:flex; 
+
+top: 1%;
+left: 5%; 
+font-weight: bold;
+color: white;
+text-shadow: 2px 2px 2px black;
+
+} 
+.Title img {
+
+    position: absolute;
+    top: 28%;
+    left: 100%;
+}
 
 
 #ImageContainer {
@@ -45,7 +114,8 @@
 }
 
 .image-wrapper:hover {
-    transform: scale(1.1); /* Optional, for hover effect */
+    transform: scale(1.1);
+    
     transition: transform 0.1s ease-in-out;
 }
 
@@ -66,6 +136,7 @@
 }
 
 .image-wrapper p {
+
     width: 100%;
 	text-align: center;
     position: relative;
@@ -78,7 +149,6 @@
     padding-bottom: 12px;
     margin-left: 2px;
     bottom: 55px;
-
     font-weight: bold;
 
     /* visibility: hidden; */
@@ -97,31 +167,47 @@
     font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
+    border : 2px solid rgb(0, 0, 0);
+    
    
 
     /* visibility: hidden; */
 }
 
 form {
-
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    top: 50%; /* Move the form down by 50% of the viewport height */
+    left: 50%; /* Move the form right by 50% of the viewport width */
+    transform: translate(-50%, -50%); 
 	margin: 20px;
 	justify-content: center;
 	align-items: center;
-	display: grid;
+	/* display: grid; */
     gap: 30px;
 
-	width: 100%;
-	height: 100%;
+	width: 20%;
+	height: 65%;
 	background-color: rgba(0, 0, 0, 0.37);
 	padding: 20px;
+   
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 
 form input {
+    margin: 10px;
 	border-radius: 8px;
-	font-size: 30px;
+	font-size: 20px;
+    padding: px;
    
+}
+
+form p {
+	font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 
 .LargeBox {
@@ -131,4 +217,54 @@ form input {
 
 }
 
+#SellCarImage {
 
+	display: flex;
+	justify-content: center;
+    scale: 0.5;
+    position: relative;
+    transform: translate(-60%, 30%); 
+    
+}
+
+#SellCarImage img {
+    border-radius: 40px;
+    
+
+}
+
+/* Info box styles */
+.hover-info {
+    
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    
+    opacity: 0;
+    visibility: hidden; 
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+   
+}
+
+/* Show the info box when the image is hovered */
+.image-wrapper:hover .hover-info {
+
+    opacity: 1;
+    visibility: visible; 
+
+}
+
+/* Override any conflicting styles for the info box paragraphs */
+.hover-info p {
+
+    background-color: transparent;
+    padding: 0 ;
+    bottom: auto ;
+    
+}
