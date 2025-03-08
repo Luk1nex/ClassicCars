@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+    </head>
+    <body>
+
+
+        <nav> 
+            
+            <div class = "Title">
+
+                <h1>Shane's Classic Cars</h1>
+                <img src="Socials/TempLogo.png" alt="Shane's Classic Cars" width="40" height="40">
+
+            </div>
+
+
+            <div class = "pages">
+    
+                <a href="index.html">Home</a>
+                <a href="ForSale.html">ShowRoom</a>
+                <a href="SellCar.html">Sell Car</a>
+                <a href="Services.html">Services</a>
+                
+            </div>
+           
+    
+            <div class="socials">
+    
+                <a href="https://www.tiktok.com/" target="_blank">
+                    <img src="Socials/TikTok.png" alt="TikTok" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="Socials/Instagram.png" alt="Instagram" width="40" height="40">
+                </a>
+    
+            </div>
+           
+    
+           
+
+        </nav>
+        
+        <script type="module" src="/main.js"></script>
+
+            <!--Load Car Data Here -->
+            <div id="ImageContainer"></div>
+            <!--Load Car Data Here -->
+
+            
+        
+
+            <script>
+                
+                const cars = [
+    {
+        name: "2020 Super Fast Car",
+        image: "car1",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+
+    },
+    {
+        name: "2021 Super Fast Car",
+        image: "car4",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 2400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car5",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1400.99
+    },
+    {
+        name: "2025 Super Fast Car",
+        image: "car7",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car8",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car9",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 2400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car10",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1400.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car11",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car12",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car13",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    {
+        name: "2024 Super Fast Car",
+        image: "car14",
+        color: "Red",
+        year: 2020,
+        mileage: 15000,
+        engine: "V8",
+        price: 1900.99
+    },
+    
+    
+];
+
+document.getElementById("ImageContainer").innerHTML = cars.map(car => `
+    <div class="image-wrapper">
+        <img src="CarPictures/${car.image}.png" alt="${car.name}">
+        <div class="hover-info">
+            <h3>${car.name}</h3>
+            <p>Year: ${car.year}</p>
+            <p>Mileage: ${car.mileage}</p>
+            <p>Engine: ${car.engine}</p>
+            <p>Color: ${car.color}</p>
+        </div>
+        <p>${car.name}</p>
+        <span class="price-tag">$${car.price.toFixed(2)}</span>
+    </div>
+`).join('');
+
+</script>
+
+   
+    </body>
+
+
+</html>
