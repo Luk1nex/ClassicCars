@@ -1,91 +1,54 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-    </head>
-    <body>
-        <script type="module" src="/main.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { margin: 0; }
+    </style>
+    
+</head>
+<body>
 
-            <!--Load Car Data Here -->
-            <div id="ImageContainer"></div>
-            <!--Load Car Data Here -->
 
-            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="access_key" value="02fdf9d8-2b7f-4453-9fc2-e642399322ed">
-                <input type="text" name="Car Model" placeholder="Car Model" class="contact-input">
-                <input type="text" name="Car Color" placeholder="Car Color" class="contact-input">
-                <input type="text" name="Car Price" placeholder="Car Price" class="contact-input">
-                <!-- <input type="file" name="Car Pictures" placeholder="Car Pictures" class="contact-input" multiple> -->
-                <input type="text" name="Modifications" placeholder="Modifications" class="LargeBox">
+    <nav> 
+            
+        <div class = "Title">
 
-                <input type="submit" value="Submit" class="contact-input">
-            </form>
-        
+            <h1>Shane's Classic Cars</h1>
+            <img src="Socials/TempLogo.png" alt="Shane's Classic Cars" width="40" height="40">
 
-            <script>
-                
-                const cars = [
-    {
-        name: "2020 Super Fast Car",
-        image: "car",
-        price: 1900.99
-    },
-    {
-        name: "2021 Super Fast Car",
-        image: "car",
-        price: 2400.99
-    },
-    {
-        name: "2024 Super Fast Car",
-        image: "car",
-        price: 1400.99
-    },
-    {
-        name: "2025 Super Fast Car",
-        image: "car",
-        price: 1900.99
-    },
-    {
-        name: "2024 Super Fast Car",
-        image: "car",
-        price: 1900.99
-    },
-    {
-        name: "2024 Super Fast Car",
-        image: "car",
-        price: 2400.99
-    },
-    {
-        name: "2024 Super Fast Car",
-        image: "car",
-        price: 1400.99
-    },
-    {
-        name: "2024 Super Fast Car",
-        image: "car",
-        price: 1900.99
-    }
-];
+        </div>
 
-document.getElementById("ImageContainer").innerHTML = cars.map(car => `
-    <div class="image-wrapper">
-        <img src="CarPictures/${car.image}.png" alt="${car.name}">
-        <p>${car.name}</p>
-        <span class="price-tag">$${car.price.toFixed(2)}</span>
-    </div>
-`).join('');
-</script>
 
-   
+        <div class = "pages">
 
-    </body>
+            <a href="index.html">Home</a>
+            <a href="ForSale.html">ShowRoom</a>
+            <a href="SellCar.html">Sell Car</a>
+            <a href="Services.html">Services</a>
+            
+        </div>
+       
 
-    <div id="info">Classic Cars</div>
+        <div class="socials">
 
-</html>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <img src="Socials/TikTok.png" alt="TikTok" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="Socials/Instagram.png" alt="Instagram" width="40" height="40">
+            </a>
+
+        </div>
+       
+
+       
+
+    </nav>
+
+<body>
+
+</html> 
