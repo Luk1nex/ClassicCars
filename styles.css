@@ -1,9 +1,8 @@
 body {
-    background-color: rgba(149, 149, 149, 0.177); /* Change this to any color */
+    background-color: rgba(149, 149, 149, 0.577); 
   }
   
   .pages {
-  /* make it so the bar is sticky at top */
     z-index: 2;
     position: fixed;
     font-size: 25px;
@@ -16,11 +15,11 @@ body {
     /* color:rgb(0, 0, 0) */
 	font-weight: bold;
     
-    color: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
 	background-color: rgba(0, 0, 0, 0.5);
 	padding: 30px;
     margin-bottom: 2px;
-    text-shadow: 2px 2px 2cqb rgb(0, 0, 0); 
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
     
 }
 
@@ -32,10 +31,12 @@ nav {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    
    }
 
   to {
     opacity: 1;
+    
   }
 
 }
@@ -44,7 +45,7 @@ nav {
     color: inherit; 
     text-decoration: none;
     background-color: rgb(43, 43, 43, .4);
-    border-radius: 8px; /* Optional, for rounded corners */
+    border-radius: 8px; 
     padding: 10px;
   }
 
@@ -53,6 +54,7 @@ nav {
     text-shadow: 1px 1px 1px rgb(255, 0, 0);
     font-weight: bold;
     text-decoration: underline;
+    border : 2px solid rgb(255, 0, 0);
    
 
 }
@@ -60,11 +62,10 @@ nav {
 .socials {
     z-index: 2;
     position: fixed;
-    left: 80%;
+    left: 85%;
     top: 2%;
     border-radius: 8px;
     transform: translate(0%, 0%);
-    background-color: rgb(43, 43, 43, .4);
     padding: 2px;
 
 }
@@ -75,22 +76,22 @@ nav {
 
 
 .Title{
-font-size: 20px;
+font-size: 25px;
 z-index: 3;
 position: fixed;
 display:flex; 
 
-top: 1%;
+top: -1%;
 left: 5%; 
 font-weight: bold;
 color: white;
-text-shadow: 2px 2px 2px black;
+text-shadow: 2px 2px 2px rgb(255, 0, 0);
 
 } 
 .Title img {
 
     position: absolute;
-    top: 28%;
+    top: 30%;
     left: 100%;
 }
 
@@ -117,20 +118,47 @@ text-shadow: 2px 2px 2px black;
 	padding : 2px;
 }
 
+
+@keyframes container-popout {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+@keyframes image-shadow {
+    from {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+    to {
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+      border-radius: 0px; 
+    }
+  }
+
+
+  
+  
 .image-wrapper:hover {
-    transform: scale(1.1);
-    
-    transition: transform 0.1s ease-in-out;
+  animation: container-popout 0.1s ease-in-out forwards;
+}
+
+.image-wrapper:hover img {
+  animation: image-shadow 0.4s ease-in-out forwards;
+
 }
 
 .image-wrapper {
-    position: relative; /* Makes sure the price tag is positioned relative to this */
+    position: relative;
     width: 100%;
+    
     
 }
 
 .image-wrapper img {
-    
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
     width: 100%;
     height: auto;
     border-radius: 8px;
