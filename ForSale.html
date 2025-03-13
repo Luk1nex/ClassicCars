@@ -2,15 +2,18 @@
 
 <html lang="en">
     <head>
+        
         <link rel="stylesheet" href="styles.css">
         <meta charset="utf-8">
 		<title>My first three.js app</title>
+
 		<style>
 			body { margin: 0; }
 		</style>
-    </head>
-    <body>
 
+    </head>
+
+    <body>
 
         <nav> 
             
@@ -25,7 +28,7 @@
             <div class = "pages">
     
                 <a href="index.html">Home</a>
-                <a href="ForSale.html">ShowRoom</a>
+                <a class="current" href="ForSale.html">ShowRoom</a>
                 <a href="SellCar.html">Sell Car</a>
                 <a href="Services.html">Services</a>
                 
@@ -42,19 +45,12 @@
                 </a>
     
             </div>
-           
-    
-           
-
+        
         </nav>
         
-
             <!--Load Car Data Here -->
             <div id="ImageContainer"></div>
             <!--Load Car Data Here -->
-
-            
-        
 
             <script>
 
@@ -83,15 +79,6 @@
             
 
         })
-        console.log(currentElement[0].trim())
-        console.log(currentElement[1].trim())
-        console.log(currentElement[2].trim())
-        console.log(currentElement[3].trim())
-        console.log(currentElement[4].trim())
-        console.log(currentElement[5].trim())
-        console.log(currentElement[6].trim())
-
-       
 
         });
         
