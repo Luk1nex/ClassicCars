@@ -1,6 +1,8 @@
 body {
-    background-color: rgba(148, 148, 148, 0.577); 
+    background-color: #E4DFDA;
+    font-family: 'Roboto', sans-serif;
 }
+
 
 .pages {
     z-index: 2;
@@ -47,6 +49,7 @@ nav {
 }
 
 .pages a:hover {
+    font-family: 'Roboto', sans-serif;
     color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
     border: 2px solid rgb(255, 0, 0);
@@ -75,7 +78,7 @@ nav {
     left: 5%; 
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 2px rgb(255, 0, 0);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 .Title img {
@@ -190,21 +193,19 @@ nav {
     }
 }
 
-#SellCarImage {
+.SellCarImage {
+    transform-origin: center;
 
-    animation: appear 3s forwards;
-    display: flex;
-    justify-content: center;
-    scale: .5;
-    position: relative;
-    transform-origin: translate(50%, 50%);
-    transform: translate(0%, -205%);
+   
 
 }
-
-#SellCarImage img {
+.SellCarImage img {
     border-radius: 40px;
     border: 4px solid rgb(0, 0, 0);
+    transform-origin: center;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    max-width: 100%;
+
 }
 
 .hover-info {
@@ -293,70 +294,148 @@ video {
     display: flex;
     justify-content: center;
     padding-top: 4%;
-    scale: 2.0;
-    animation: Arise 1s;
+    scale: 1.5;
+    animation: tileAppearactual 1s forwards;
+    transform: translate(0%, -180%);
     
 }
 
 
 
 .info {
-    animation: Arise 1s;
+    
+    display: flex;
+    flex-direction: row;
+    animation: tileAppearactual 1s forwards;
     position: relative;
     transform-origin: center;
     margin: 0 auto;
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 50px;
     color: white;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 15%;
+    gap: 1%;
+    border-radius: 8px;
+    transform-origin: translate(50%, 50%);
+    align-items: flex-start;
     padding-top: 1%;
-    gap: 2%;
-    border-radius: 50px;
+    padding-bottom: 1%;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    transform: translate(0%, -80%);
+
+
+    
+
 
 }
 
+
+
 .service1 img, .service2 img {
+    
+    max-width: 25%;
+    max-height: 15%;
     position: relative;
     display: inline-block;
     transform-origin: translate(50%, 50%);
     margin: 0 auto;
     border : 2px solid rgb(0, 0, 0);
+    display: flex;
+    transform: translate(0%, -235%);
+    box-shadow: 0 0 50px rgb(0, 0, 0);
     
 }
 
-.text-group1, .text-group2 {
+.text-group2 {
     
+    position: relative;
+    z-index: 2;
+    transform: translate(0%, 0%);
     text-align: center;
-   
+    display: flex;
+    flex-direction: row;
+    background-color: #C1666B;
+    transform-origin: translate(50%, 50%);
+    justify-content: center;
+    border-radius: 8px;
+    min-width: 110%;
+    color: #48A9A6;;
+    text-shadow: 1px 1px 1px black;
+    background-color: #4357AD;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    
+    
+
+    
+}
+
+.text-group1 {
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    transform-origin: translate(50%, 50%);
+    transform: translate(0%, 30%);
+    width: 25%;
+    height: 25%;
+    background-color: #C1666B;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+    margin: 2%;
+    padding: .5%;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+
+    
+ 
+}
+.extra-info{
+    animation: tileAppearactual 1s forwards;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 28%;
+    transform: translate(0%, -50%);
 }
 
 .text-group1 h1, .text-group2 h1 {
+    
     white-space: nowrap;
-    color: rgb(255, 0, 0);
+    color: #D4B483;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    padding-left: 2%;
+    
+    }
+
+ .text-group2 p{
+    
+  
     }
 
 @keyframes backgroundAppear {
     from {
         opacity: 0;
         background-color: rgba(255, 0, 0, 0);
-        
     }
     to {
         opacity: 1;
-        background-color: rgba(10, 10, 10, 0.5);
-        
-        
+        background-color: rgba(10, 10, 10, 0.5);    
     }
 }
 
 .home-container {
     animation: backgroundAppear 2s forwards;
-    font-size: 40px;
+    font-size: 30px;
     position: relative;
     transform-origin: center;
     display: flex;
@@ -392,6 +471,18 @@ video {
         opacity: 1;
         transform: translateX(0);
         background-color: rgba(109, 109, 109, 0.479);
+        
+        
+    }
+} 
+
+@keyframes tileAppearactual {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
         
         
     }
@@ -470,15 +561,16 @@ video {
 }
 .sell-intro {
     box-shadow: 0 0 50px rgb(0, 0, 0);
-
     overflow: hidden;
     margin-top: 10%;
     text-align: center;
     font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    background-color: rgba(0, 0, 0, 0.37);
+    color: #48A9A6;;
+    text-shadow: 1px 1px 1px black;
+    background-color: #4357AD;
     padding: 1%;
+    transform: translate(0%, -0%);
+    
 }
 
 .sell-intro p{
@@ -488,35 +580,50 @@ video {
 }
 
 .sell-info {
-    margin-top: 5%;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.37);
-    position: relative;
-    transform-origin: center;
-    transform: translate(1%, 0%);
-    width: 25%;
     
-    padding-bottom: 10%;
+    border-radius: 10px;
+    background-color: #C1666B;
+    position: relative;
+    transform-origin: translate(-50%, -50%);
+    width: 30%;
+    
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left:4%;
     box-shadow: 0 0 50px rgb(0, 0, 0);
+    max-width: fit-content;
+
+
 
 
 
 }
+
+.sell-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 6%;
+    transform: translate(0%, 25%);
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
 
 .sell-info h1 {
     font-size: 40px;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 2px rgb(255, 0, 0);
+    color:  #D4B483;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
     
 
 }
 .sell-info p{
+
     border-radius: 8px;
     opacity: 0;
     transform-origin: translate(50%, 50%);
@@ -524,11 +631,10 @@ video {
     min-width: 85%;
     animation: Panning 1s forwards;
     font-weight: bold;
-    color: white;
+    color: #E4DFDA;
     text-shadow: 2px 2px 2px black;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: #D4B483;
     padding: 1%;
-    margin: 5%;
     border: 2px solid rgb(0, 0, 0);
 }
 
@@ -546,6 +652,21 @@ video {
 
 }
 
+.sell-info p:nth-child(5){
+    animation-delay: 2.5s;
+
+}
+
+.sell-info p:nth-child(6){
+    animation-delay: 3s;
+
+}
+
+.sell-info p:nth-child(7){
+    animation-delay: 3.5s;
+
+}
+
 div .Box-Heading{
 
     font-weight: bold;
@@ -555,25 +676,32 @@ div .Box-Heading{
 
 
 form {
+    
     animation: appear 3s forwards;
     overflow: hidden;
     z-index: 10;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(100%, -50%);
+    position: relative;
+  
+    transform: translate(0%, 0%);
+    transform-origin: center;
     margin: 20px;
     display: flex;
     flex-direction: column; 
     width: 20%;
-    height: 65%;
+    height: 45%;
     background-color: rgba(0, 0, 0, 0.37);
-    padding: 20px;
+    padding: 1%;
     border-radius: 10px;
     box-shadow: 0 0 50px rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: fit-content;
 
 }
-
+.LargeBox {
+    transform-origin: translate(50%, 50%);
+}
 form input {
     margin: 5px;
     border-radius: 8px;
@@ -591,5 +719,6 @@ form p {
 .lock-body {
     overflow: hidden;
 
-}
+} 
      
+

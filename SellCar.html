@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         body { margin: 0; }
     </style>
@@ -57,38 +60,62 @@
     </div>
 
 
-    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-        
-        <p>Looking to sell a classic car? Fill out the form below to get started!</p>
-        <input type="hidden" name="access_key" value="02fdf9d8-2b7f-4453-9fc2-e642399322ed">
-        <input type="text" name="Car Model" placeholder="Car Model" class="contact-input">
-        <input type="text" name="Car Color" placeholder="Car Color" class="contact-input">
-        <input type="text" name="Car Price" placeholder="Car Price" class="contact-input">
-        <!-- <input type="file" name="Car Pictures" placeholder="Car Pictures" class="contact-input" multiple> -->
-        <input type="text" name="Modifications" placeholder="Modifications" class="LargeBox">
-        <input type="submit" value="Submit" class="contact-input">
-    </form>
+    <div class = "sell-container">
+   
 
   
     
+        <div class="sell-info">
+            <h1>Why Sell to Us?</h1>
+            <p>Fair & Competitive Offers <br><br>•  We know the true value of classic cars and will make you a fair market offer.</p>
+            <p>Fast & Simple Process <br><br>•  No dealing with tire kickers or listing hassles.</p>
+            <p>We Handle the Details <br><br>•  We take care of inspections, paperwork, and transportation if needed.</p>
+        </div>
 
-    <div class = "sell-info">
-        <h1>Why Sell to Us?</h1>
-        <p>Fair & Competitive Offers <br><br>•  We know the true value of classic cars and will make you a fair market offer.</p>
-        <p>Fast & Simple Process <br><br>•  No dealing with tire kickers or listing hassles.</p>
-        <p>We Handle the Details <br><br>•  We take care of inspections, paperwork, and transportation if needed.</p>
+
         
         
         
+        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+        
+            <p>Looking to sell a classic car? Fill out the form below to get started!</p>
+            <input type="hidden" name="access_key" value="02fdf9d8-2b7f-4453-9fc2-e642399322ed">
+            <input type="text" name="Car Model" placeholder="Car Model" class="contact-input">
+            <input type="text" name="Car Color" placeholder="Car Color" class="contact-input">
+            <input type="text" name="Car Price" placeholder="Car Price" class="contact-input">
+            <!-- <input type="file" name="Car Pictures" placeholder="Car Pictures" class="contact-input" multiple> -->
+            <input type="text" name="Modifications" placeholder="Modifications" class="LargeBox">
+            <input type="submit" value="Submit" class="contact-input">
+        </form>
+
+        <div class ="SellCarImage">
+            <img src="CarPictures/car8.png" alt="Car" width= "600" height="450">
+       </div> 
+
+
+
+
+       
+
+       
+        
+
     </div>
-
-    <div id="SellCarImage">
-
-        <img src="CarPictures/car8.png" alt="Car">
-    </div>
+        
+     
 
 
+    
+        
+        
+        
 
-<body>
+
+
+   
+
+
+
+    </body>
 
 </html> 
