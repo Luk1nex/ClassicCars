@@ -90,7 +90,7 @@
         document.getElementById("ImageContainer").innerHTML = cars.map(car => `
         <div class="image-wrapper">
         <img src="CarPictures/${car.image}.png" alt="${car.name}">
-        <div class="hover-info">
+        <div class="hover-info" style="opacity: 0; z-index: 100;">
         <h3>${car.name}</h3>
         <p>Year: ${car.year}</p>
         <p>Mileage: ${car.mileage}</p>
@@ -103,7 +103,43 @@
         `).join('');
 
         
+
+
+        function setupHoverEffect() {
+
+  if (window.innerWidth < 500) {
+    console.log("resized");
+    const Data = document.querySelectorAll('.hover-info');
+    
+    Data.forEach(info => {
+    
+        info.addEventListener('click', () => {
+            console.log("clicked");
+            Data.forEach(current => {
+                if(current !== info) {
+                    current.style.opacity = '0';
+                }
+            });
+            console.log(info.style.opacity);
+
+            info.style.opacity = info.style.opacity === '1' ? '0' : '1';
+        
       });
+    });
+  }
+}
+setupHoverEffect();
+window.addEventListener('resize', setupHoverEffect);
+
+
+
+
+
+
+
+
+
+});
               
 
 </script>

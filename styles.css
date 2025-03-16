@@ -216,12 +216,13 @@ nav {
     text-align: center;
     width: 80%;
     opacity: 0;
-    visibility: hidden; 
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+
+
 .image-wrapper:hover .hover-info {
-    opacity: 1;
+    animation: appear 0.3s ease-in-out forwards;
     visibility: visible; 
 }
 
@@ -909,6 +910,61 @@ form p {
     transform: translate(0%, -180%);
    }
 
+   /* .image-wrapper:hover {
+    animation: container-popout 0.1s ease-in-out forwards;
+  }
+
+ 
+  @keyframes dissappear{
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+
+  }
+
+  @keyframes scaleReset{
+
+    from {
+     
+    }
+    to {
+      transform: scale(1);
+    
+      border-radius: 8px;  
+      background-color: none;
+      box-shadow: none;
+    }
+  } 
+
+
+  .image-wrapper:hover {
+    animation: scaleReset  0.3s ease-in-out forwards;
+    animation-delay: 4.0s;
+  }
+
+  */
+
+  .image-wrapper:hover {
+    animation: none;
+}
+  
+.image-wrapper:hover .hover-info {
+    animation: none;
+}
+
+.hover-info {
+    opacity: 0;
+    z-index: 100;
+}
+
+
+.image-wrapper{
+    background-color: none;
+    animation: none;
+}
 
 }
 
