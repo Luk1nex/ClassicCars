@@ -26,7 +26,11 @@ body {
 }
 
 nav {
+    z-index: 20;
     animation: fadeIn 2s;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 @keyframes fadeIn {
@@ -87,14 +91,7 @@ nav {
     left: 100%;
 }
 
-#ImageContainer {
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    padding: 20px;
-    padding-top: 100px;
-}
+
 
 #ImageContainer img {
     background-color: rgb(0, 0, 0);
@@ -103,17 +100,17 @@ nav {
     display: block;
     border-radius: 8px;
     padding: 2px;
-    transform-origin: center; /* Ensure transformations originate from the center */
+    transform-origin: center;
 }
 
 @keyframes container-popout {
     from {
         transform: scale(1);
-        transform-origin: center; /* Ensure scaling originates from the center */
+        transform-origin: center;
     }
     to {
         transform: scale(1.1);
-        transform-origin: center; /* Ensure scaling originates from the center */
+        transform-origin: center;
     }
 }
 
@@ -414,13 +411,11 @@ video {
     color: #D4B483;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
     padding-left: 2%;
+
     
     }
 
- .text-group2 p{
-    
-  
-    }
+
 
 @keyframes backgroundAppear {
     from {
@@ -690,7 +685,7 @@ form {
     width: 20%;
     height: 45%;
     background-color: rgba(0, 0, 0, 0.37);
-    padding: 1%;
+   
     border-radius: 10px;
     box-shadow: 0 0 50px rgb(0, 0, 0);
     position: relative;
@@ -721,4 +716,215 @@ form p {
 
 } 
      
+#ImageContainer {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+
+
+   
+/*mobile Viewport*/
+    
+@media screen and  (max-width: 400px) {
+
+ #ImageContainer {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+        padding: 20px;
+        padding-top: 100px;
+    }
+
+ .Title{
+    animation: none;
+    font-size: 16px;
+    transform: translate(0%, 90%);
+    
+ }
+
+ .pages{
+    background-color: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    animation: none;
+
+    font-size: 12px;
+    padding-bottom: 20%;
+ }
+
+ .socials{
+
+    animation: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+   transform: translate(-50%, 70%);
+ }
+
+ .lock-body{
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+
+ @keyframes Shuffle {
+
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(-1%, 0%);
+    }
+}
+
+
+ .text-group2{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(0%, 220%);
+    scale: .9
+
+ }
+
+ .text-group1{
+    
+
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    width: 80%;
+    transform: translate(0%, -85%);
+ }
+
+
+
+
+ .extra-info{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0%;
+ 
+ 
+}
+
+.service2{
+    visibility: hidden;
+}
+
+.text-group1 h1{
+    font-size: 10px;
+  
+    }
+
+
+    .calendar {
+        scale: 1.0;
+        transform: translate(0%, 300%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+    }
+
+    .lock-body {
+        overflow: visible;
+    
+    } 
+
+
+   .home-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0%;
+        font-size: 22px;
+        scale: .5;
+        transform: translate(0%, -20%);
+        overflow: hidden;
+   } 
+
+   .sell-intro{
+
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 0%;
+        font-size: 10px;
+        transform: translate(0%, 200%);
+        scale: 1.0;
+        
+   }
+
+   .sell-info{
+    order: 2;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0%;
+        font-size: 10px;
+        width: 100%;
+        transform: translate(0%, -105%);
+   }
+
+   .sell-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+   }
+
+   form{
+        width: 210%;
+        transform: translate(0%, 185%);
+   }
+   .sell-container img{
+
+    width: 75%;
+    height: auto;
+    border-radius: 8px;
+
+   }
+   .SellCarImage{
+    order: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 6%;
+    transform: translate(0%, -180%);
+   }
+
+
+}
+
+
+/* 
+@media (max-width: 400px) {
+    body {
+        background-color: rgba(255, 0, 0, 0.5) !important;
+    }
+} */
+/* 
+
+@media  only screen and (min-width: 401px) {
+    body{
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+} */
+
 
