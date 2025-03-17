@@ -90,7 +90,7 @@
         document.getElementById("ImageContainer").innerHTML = cars.map(car => `
         <div class="image-wrapper">
         <img src="CarPictures/${car.image}.png" alt="${car.name}">
-        <div class="hover-info" style="opacity: 0; z-index: 100;">
+        <div class="hover-info">
         <h3>${car.name}</h3>
         <p>Year: ${car.year}</p>
         <p>Mileage: ${car.mileage}</p>
@@ -106,24 +106,23 @@
 
 
         function setupHoverEffect() {
-
   if (window.innerWidth < 500) {
-    console.log("resized");
-    const Data = document.querySelectorAll('.hover-info');
+    const imageWrappers = document.querySelectorAll('.image-wrapper');
     
-    Data.forEach(info => {
-    
-        info.addEventListener('click', () => {
-            console.log("clicked");
-            Data.forEach(current => {
-                if(current !== info) {
-                    current.style.opacity = '0';
-                }
-            });
-            console.log(info.style.opacity);
-
-            info.style.opacity = info.style.opacity === '1' ? '0' : '1';
+    imageWrappers.forEach(wrapper => {
+      wrapper.addEventListener('click', function() {
+        const infoBox = this.querySelector('.hover-info');
+        const currentOpacity = getComputedStyle(infoBox).opacity;
         
+        document.querySelectorAll('.hover-info').forEach(box => {
+          box.style.opacity = '0';
+          box.style.visibility = 'hidden';
+        });
+        
+        if (currentOpacity < 0.5) {
+          infoBox.style.opacity = '1';
+          infoBox.style.visibility = 'visible';
+        }
       });
     });
   }
