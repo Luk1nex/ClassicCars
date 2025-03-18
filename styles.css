@@ -959,7 +959,7 @@ form p {
     flex-direction: row;
     align-items: center;
     gap: 6%;
-    transform: translate(0%, -180%);
+    transform: translate(0%, -225%);
    }
 
    /* .image-wrapper:hover {
