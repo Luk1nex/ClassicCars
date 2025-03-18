@@ -783,7 +783,7 @@ form p {
    
 /*mobile Viewport*/
     
-@media screen and  (max-width: 400px) {
+@media screen and  (max-width: 450px) {
 
  #ImageContainer {
         margin-top: 100px;
