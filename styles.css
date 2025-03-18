@@ -607,6 +607,7 @@ video {
     } 
    .text-group1{
     max-width: 30vh;
+    padding-inline: 10vh;
    }
 
   
